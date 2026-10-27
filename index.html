@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scripts and Scrolls — Digital craft by Elijah Mugo</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" href="assets/newfavicon.png">
 <meta name="description" content="Scripts and Scrolls is the digital workshop of Elijah Mugo: thoughtful websites shaped by code, language and the liberal arts.">
 <meta property="og:title" content="Scripts and Scrolls — Digital craft by Elijah Mugo">
 <meta property="og:description" content="Thoughtful websites shaped by code, language and the liberal arts.">
@@ -90,10 +90,7 @@ h2{font-size:clamp(28px,6vw,44px);font-weight:800;letter-spacing:-.02em;line-hei
   width:640px;height:640px;border-radius:50%;pointer-events:none;
   background:radial-gradient(circle,rgba(201,242,78,.13),transparent 65%);
 }
-.hero .avatar{
-  width:96px;height:96px;border-radius:50%;object-fit:cover;margin:0 auto 18px;
-  border:3px solid var(--surface-2);outline:2px solid var(--accent);outline-offset:3px;
-}
+.hero .hero-logo{width:min(380px,82vw);height:auto;object-fit:contain;margin:0 auto 18px}
 .badge{
   display:inline-flex;align-items:center;gap:8px;
   font-size:13px;color:var(--muted);
@@ -235,22 +232,6 @@ h2{font-size:clamp(28px,6vw,44px);font-weight:800;letter-spacing:-.02em;line-hei
 .plan li svg{width:16px;height:16px;color:var(--accent);flex:none;margin-top:3px}
 .plan .btn{justify-content:center}
 @media(min-width:900px){.price-grid{grid-template-columns:repeat(3,1fr);align-items:stretch}}
-.payment-panel{max-width:720px;margin:30px auto 0;padding:24px;background:var(--surface-2);border:1px solid var(--accent);border-radius:var(--radius);display:none}
-.payment-panel.is-open{display:block}
-.payment-panel h3{font-size:20px;margin-bottom:6px}
-.payment-panel>p{color:var(--muted);font-size:14px;margin-bottom:20px}
-.payment-form{display:grid;gap:14px}
-.payment-fields{display:grid;gap:14px}
-.payment-field{display:grid;gap:6px}
-.payment-field label{font-size:13px;font-weight:600;color:var(--text)}
-.payment-field input{width:100%;padding:12px 13px;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);font:inherit;font-size:14px}
-.payment-field input:focus{outline:2px solid var(--accent);outline-offset:2px;border-color:var(--accent)}
-.payment-note,.payment-error{font-size:13px;color:var(--muted)}
-.payment-error{color:#ff9d9d;min-height:20px}
-.payment-submit{border:0;cursor:pointer;justify-content:center;background:var(--accent);color:var(--accent-ink)}
-.payment-submit:disabled{cursor:wait;opacity:.65}
-@media(min-width:640px){.payment-fields{grid-template-columns:1fr 1fr}.payment-field:nth-child(3),.payment-field:nth-child(4){grid-column:span 2}}
-
 .about-wrap{display:grid;gap:32px}
 .ascii-stage{
   border:1px solid var(--border);border-radius:16px;background:#050505;
@@ -368,7 +349,7 @@ footer .socials svg{width:20px;height:20px}
     <div class="layer clean"></div>
   </div>
   <div class="container">
-    <img class="avatar" src="https://cdn.jsdelivr.net/gh/ElijahMugo-lab/lumen@portfolio/assets/headshot.jpg" alt="Elijah Mugo" width="96" height="96">
+    <img class="hero-logo" src="assets/newlogo.png" alt="Scripts and Scrolls Studio logo" width="380" height="217">
     <div class="badge"><span class="dot"></span> Open to thoughtful commissions</div>
     <h1 class="hero-carousel" aria-label="I write and build digital works that last."><span class="hero-carousel-prefix">I write &amp; build digital works that</span><span class="hero-carousel-badge"><span class="hero-carousel-content" aria-hidden="true">last.</span></span></h1>
     <p>Scripts and Scrolls is the digital workshop of Elijah Mugo: websites where careful code meets the old disciplines of language, logic and form.</p>
@@ -541,7 +522,7 @@ footer .socials svg{width:20px;height:20px}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 13 4 4L19 7"/></svg>Delivered in about 1 week</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 13 4 4L19 7"/></svg>2 rounds of revisions</li>
         </ul>
-        <button class="btn btn-ghost pay-plan" type="button" data-plan="starter" data-plan-name="Starter" data-amount="100">Pay deposit</button>
+        <a class="btn btn-ghost" href="https://wa.me/254743639744?text=Hi%20Elijah%2C%20I%27m%20interested%20in%20the%20Starter%20package" target="_blank" rel="noopener">Start a project</a>
       </div>
       <div class="plan popular reveal">
         <div class="flag">Most popular</div>
@@ -555,7 +536,7 @@ footer .socials svg{width:20px;height:20px}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 13 4 4L19 7"/></svg>Forms, maps &amp; analytics</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 13 4 4L19 7"/></svg>Delivered in 2–3 weeks, 4 revisions</li>
         </ul>
-        <button class="btn btn-wa pay-plan" type="button" data-plan="business" data-plan-name="Business" data-amount="200">Pay deposit</button>
+        <a class="btn btn-wa" href="https://wa.me/254743639744?text=Hi%20Elijah%2C%20I%27m%20interested%20in%20the%20Business%20package" target="_blank" rel="noopener">Start a project</a>
       </div>
       <div class="plan reveal">
         <h3>Premium</h3>
@@ -570,21 +551,6 @@ footer .socials svg{width:20px;height:20px}
         </ul>
         <a class="btn btn-ghost" href="https://wa.me/254743639744?text=Hi%20Elijah%2C%20I%27m%20interested%20in%20the%20Premium%20package" target="_blank" rel="noopener">Start a project</a>
       </div>
-    </div>
-    <div class="payment-panel" id="payment-panel" aria-live="polite">
-      <h3>Pay your <span id="payment-plan-name">package</span> deposit</h3>
-      <p>50% deposit · <strong id="payment-amount">$0</strong> USD · Secure checkout by Pesapal</p>
-      <form class="payment-form" id="payment-form">
-        <div class="payment-fields">
-          <div class="payment-field"><label for="payment-first-name">First name</label><input id="payment-first-name" name="firstName" autocomplete="given-name" required></div>
-          <div class="payment-field"><label for="payment-last-name">Last name</label><input id="payment-last-name" name="lastName" autocomplete="family-name" required></div>
-          <div class="payment-field"><label for="payment-email">Email address</label><input id="payment-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="payment-field"><label for="payment-phone">Phone number</label><input id="payment-phone" name="phone" type="tel" autocomplete="tel" placeholder="+254 7XX XXX XXX" required></div>
-        </div>
-        <p class="payment-error" id="payment-error" role="alert"></p>
-        <p class="payment-note">You will continue to Pesapal to choose a payment method. Do not refresh while checkout is opening.</p>
-        <button class="btn payment-submit" id="payment-submit" type="submit">Continue to Pesapal</button>
-      </form>
     </div>
   </div>
 </section>
@@ -832,58 +798,6 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 
 const hero = document.querySelector('.hero');
 hero.addEventListener('touchstart', () => hero.classList.toggle('revealed'), { passive: true });
-
-(() => {
-  const panel = document.getElementById('payment-panel');
-  const form = document.getElementById('payment-form');
-  const error = document.getElementById('payment-error');
-  const submit = document.getElementById('payment-submit');
-  const planName = document.getElementById('payment-plan-name');
-  const amount = document.getElementById('payment-amount');
-  if (!panel || !form || !error || !submit) return;
-  let selectedPlan = '';
-
-  document.querySelectorAll('.pay-plan').forEach(button => {
-    button.addEventListener('click', () => {
-      selectedPlan = button.dataset.plan;
-      planName.textContent = button.dataset.planName;
-      amount.textContent = `$${button.dataset.amount}`;
-      error.textContent = '';
-      panel.classList.add('is-open');
-      document.getElementById('payment-first-name').focus();
-      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-  });
-
-  form.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (!selectedPlan) return;
-    error.textContent = '';
-    submit.disabled = true;
-    submit.textContent = 'Opening secure checkout...';
-    try {
-      const response = await fetch('/api/create-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan: selectedPlan, ...Object.fromEntries(new FormData(form)) })
-      });
-      const data = await response.json();
-      if (!response.ok || !data.redirectUrl) throw new Error(data.error || 'Payment could not be started.');
-      window.location.href = data.redirectUrl;
-    } catch (requestError) {
-      error.textContent = requestError.message || 'Payment could not be started. Please try again.';
-      submit.disabled = false;
-      submit.textContent = 'Continue to Pesapal';
-    }
-  });
-
-  if (new URLSearchParams(window.location.search).get('payment') === 'returned') {
-    panel.classList.add('is-open');
-    planName.textContent = 'payment';
-    amount.textContent = 'returned';
-    error.textContent = 'Pesapal sent you back. Your payment is being verified; we will confirm it with the transaction reference.';
-  }
-})();
 
 </script>
 </body>
