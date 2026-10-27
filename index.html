@@ -740,9 +740,11 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   let queued = false;
   const update = () => {
     const viewport = innerHeight;
+    const revealRadius = 48;
     paragraphs.forEach((paragraph, paragraphIndex) => {
       const rect = paragraph.getBoundingClientRect();
-      const progress = Math.max(0, Math.min(1, (viewport * .82 - rect.top) / (viewport * .55 + rect.height)));
+      const revealLine = viewport * .82;
+      const progress = Math.max(0, Math.min(1, (revealLine + revealRadius - rect.top) / (rect.height + revealRadius * 2)));
       const words = wordsByParagraph[paragraphIndex];
       words.forEach((word, index) => {
         word.style.color = progress * words.length > index ? 'var(--text)' : 'rgba(245,245,245,.18)';
